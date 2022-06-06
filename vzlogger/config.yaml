@@ -9,3 +9,4 @@ arch:
   - amd64
 schema:
   configfile: "str"
+image: ghcr.io/holgerb/homeassistant-addon-vzlogger/{arch}
