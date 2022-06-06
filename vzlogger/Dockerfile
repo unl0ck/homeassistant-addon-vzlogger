@@ -3,7 +3,6 @@ ARG BUILD_FROM
 FROM ${BUILD_FROM} as builder
 
 ENV LANG C.UTF-8
-ENV YQ_VERSION="v4.13.5"
 
 # hadolint ignore=DL3008
 RUN echo $(uname -m) && \
@@ -24,8 +23,7 @@ RUN echo $(uname -m) && \
     libgcrypt-dev \
     autoconf \
     automake \
-    libtool \
-
+    libtool
 
 WORKDIR /vzlogger
 RUN git clone https://github.com/volkszaehler/libsml.git --depth 1 && \
@@ -83,7 +81,7 @@ RUN apk update && apk upgrade && apk add \
     libjson-c5 \
     liblept5 \
     libmosquitto1 \
-    libunistring2 \
+    libunistring2
 
 # without running a user context, no exec is possible and without the dialout group no access to usb ir reader possible
 # RUN useradd -G dialout vz && mkdir -p /home/vz && chown vz:vz /home/vz
