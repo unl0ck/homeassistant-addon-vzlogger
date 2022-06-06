@@ -7,6 +7,8 @@ description: vzlogger for homeassistant,
 url: https://github.com/holgerb/homeassistant-addon-vzlogger,
 arch:
   - amd64
+apparmor: false
+privileged: [ "SYS_RAWIO" ]
 schema:
   configfile: "str"
 image: ghcr.io/holgerb/homeassistant-addon-vzlogger/{arch}
