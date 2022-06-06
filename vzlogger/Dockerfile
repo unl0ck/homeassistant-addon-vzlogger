@@ -21,7 +21,11 @@ RUN echo $(uname -m) && \
     openssl-dev \
     gnutls-dev \
     libmicrohttpd-dev \
-    libgcrypt-dev
+    libgcrypt-dev \
+    autoconf \
+    automake \
+    libtool \
+
 
 WORKDIR /vzlogger
 RUN git clone https://github.com/volkszaehler/libsml.git --depth 1 && \
