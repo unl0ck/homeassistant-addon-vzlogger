@@ -65,7 +65,6 @@ LABEL \
 # libsml is linked statically => no need to copy
 COPY --from=builder /usr/local/bin/vzlogger /usr/local/bin/vzlogger
 COPY --from=builder /usr/local/lib/libmbus.so* /usr/local/lib/
-COPY --from=builder /usr/bin/yq /usr/bin/yq
 COPY rootfs /
 
 # hadolint ignore=DL3008
