@@ -23,7 +23,9 @@ RUN echo $(uname -m) && \
     libgcrypt-dev \
     autoconf \
     automake \
-    libtool
+    libtool \
+    libunistring-dev \
+    cyrus-sasl-dev
 
 WORKDIR /vzlogger
 RUN git clone https://github.com/volkszaehler/libsml.git --depth 1 && \
