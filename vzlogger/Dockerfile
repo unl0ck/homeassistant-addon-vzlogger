@@ -7,36 +7,21 @@ ENV YQ_VERSION="v4.13.5"
 
 # hadolint ignore=DL3008
 RUN echo $(uname -m) && \
-    apt-get update && apt-get install -y --no-install-recommends \
-    build-essential \
-    git-core \
+    apk update && apk upgrade &&  apk add \
+    make \
+    git \
     cmake \
-    pkg-config \
-    libcurl4-openssl-dev \
-    libgnutls28-dev \
-    libsasl2-dev \
-    uuid-dev \
-    libtool \
-    libssl-dev \
-    libgcrypt20-dev \
+    gcc \
+    libc-dev \
+    util-linux-dev \
+    g++ \
+    json-c-dev \
+    curl-dev \
+    mosquitto-dev \
+    openssl-dev \
+    gnutls-dev \
     libmicrohttpd-dev \
-    libltdl-dev \
-    libjson-c-dev \
-    libleptonica-dev \
-    libmosquitto-dev \
-    libunistring-dev \
-    dh-autoreconf \
-    dpkg-dev \
-    wget \
-    && rm -rf /var/lib/apt/lists/* \
-    && dpkg-architecture -q DEB_BUILD_ARCH \
-    && case "$(dpkg-architecture -q DEB_BUILD_ARCH)" in \
-        amd64) export YQ_BINARY="yq_linux_amd64";; \
-        armel) export YQ_BINARY="yq_linux_arm";; \
-        armhf) export YQ_BINARY="yq_linux_arm";; \
-    esac \
-    && wget --progress=dot:giga https://github.com/mikefarah/yq/releases/download/${YQ_VERSION}/${YQ_BINARY} -O /usr/bin/yq && \
-    chmod +x /usr/bin/yq
+    libgcrypt-dev
 
 WORKDIR /vzlogger
 RUN git clone https://github.com/volkszaehler/libsml.git --depth 1 && \
@@ -80,7 +65,7 @@ COPY --from=builder /usr/bin/yq /usr/bin/yq
 COPY rootfs /
 
 # hadolint ignore=DL3008
-RUN apt-get update && apt-get install -y --no-install-recommends \
+RUN apk update && apk upgrade && apk add \
     udev \
     libcurl4 \
     libgnutls30 \
@@ -95,7 +80,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     liblept5 \
     libmosquitto1 \
     libunistring2 \
-    && rm -rf /var/lib/apt/lists/*
 
 # without running a user context, no exec is possible and without the dialout group no access to usb ir reader possible
 # RUN useradd -G dialout vz && mkdir -p /home/vz && chown vz:vz /home/vz
