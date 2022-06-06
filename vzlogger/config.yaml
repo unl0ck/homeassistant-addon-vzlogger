@@ -1,0 +1,10 @@
+name: vzlogger for homeassistant,
+version: dev,
+slug: homeassistant-addon-vzlogger,
+devices:
+  - /dev/ttyUSB0
+description: vzlogger for homeassistant,
+url: https://github.com/holgerb/homeassistant-addon-vzlogger,
+arch:
+  - amd64
+

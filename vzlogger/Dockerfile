@@ -1,5 +1,4 @@
-ARG BUILD_FROM=ghcr.io/hassio-addons/debian-base/amd64:1d0629c
-
+ARG BUILD_FROM
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM} as builder
 
@@ -64,11 +63,8 @@ LABEL \
     io.hass.arch="${BUILD_ARCH}" \
     io.hass.type="addon" \
     io.hass.version=${BUILD_VERSION} \
-    maintainer="Markus Siebert <mail@markussiebert.com>" \
     org.opencontainers.image.title="${BUILD_NAME}" \
     org.opencontainers.image.description="${BUILD_DESCRIPTION}" \
-    org.opencontainers.image.vendor="Markus Siebert <mail@markussiebert.com>" \
-    org.opencontainers.image.authors="Markus Siebert <mail@markussiebert.com>" \
     org.opencontainers.image.licenses="GNU General Public License v3.0" \
     org.opencontainers.image.url="https://github.com/${BUILD_REPOSITORY}/blob/main/README.md" \
     org.opencontainers.image.source="https://github.com/${BUILD_REPOSITORY}" \
