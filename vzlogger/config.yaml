@@ -7,4 +7,5 @@ description: vzlogger for homeassistant,
 url: https://github.com/holgerb/homeassistant-addon-vzlogger,
 arch:
   - amd64
-
+schema:
+  configfile: "str"
