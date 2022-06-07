@@ -9,7 +9,11 @@ arch:
   - amd64
 apparmor: false
 privileged: [ "SYS_RAWIO" ]
+map:
+  - share:ro
 schema:
   configfile: "str"
+options: 
+  configfile": /share/vzlogger.conf
 init: false
 image: ghcr.io/holgerb/homeassistant-addon-vzlogger-{arch}
