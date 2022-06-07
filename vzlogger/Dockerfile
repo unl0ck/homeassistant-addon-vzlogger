@@ -1,4 +1,4 @@
-ARG BUILD_FROM
+ARG BUILD_FROM=ghcr.io/home-assistant/amd64-base:3.15
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM} as builder
 
@@ -69,22 +69,19 @@ COPY rootfs /
 
 # hadolint ignore=DL3008
 RUN apk update && apk upgrade && apk add \
-    udev \
-    libcurl4 \
-    libgnutls30 \
-    libsasl2-2  \
-    libuuid1 \
-    libssl1.1 \
-    libgcrypt20  \
-    libmicrohttpd12 \
-    libltdl7 \
-    libatomic1 \
-    libjson-c5 \
-    liblept5 \
-    libmosquitto1 \
-    libunistring2
+    libunistring \
+    mosquitto \
+    cyrus-sasl \
+    libmicrohttpd \
+    libuuid \
+    gcc \
+    g++
 
 # without running a user context, no exec is possible and without the dialout group no access to usb ir reader possible
 # RUN useradd -G dialout vz && mkdir -p /home/vz && chown vz:vz /home/vz
+
 RUN chmod a+x /etc/services.d/vzlogger/listdevices.sh && \
-    usermod -a -G dialout root
+    chmod a+x /etc/services.d/vzlogger/run
+
+#RUN chmod a+x /etc/services.d/vzlogger/listdevices.sh && \
+#    usermod -a -G dialout root
