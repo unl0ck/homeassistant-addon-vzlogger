@@ -11,4 +11,5 @@ apparmor: false
 privileged: [ "SYS_RAWIO" ]
 schema:
   configfile: "str"
+init: false
 image: ghcr.io/holgerb/homeassistant-addon-vzlogger-{arch}
