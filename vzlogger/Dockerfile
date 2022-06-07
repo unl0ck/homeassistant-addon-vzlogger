@@ -75,7 +75,8 @@ RUN apk update && apk upgrade && apk add \
     libmicrohttpd \
     libuuid \
     gcc \
-    g++
+    g++ \
+    eudev
 
 # without running a user context, no exec is possible and without the dialout group no access to usb ir reader possible
 # RUN useradd -G dialout vz && mkdir -p /home/vz && chown vz:vz /home/vz
