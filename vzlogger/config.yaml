@@ -4,16 +4,20 @@ slug: "homeassistant-addon-vzlogger"
 devices:
   - /dev/ttyUSB0
 description: "vzlogger for homeassistant"
-url: "https://github.com/holgerb/homeassistant-addon-vzlogger"
+url: "https://github.com/unl0ck/homeassistant-addon-vzlogger.git"
 arch:
+  - armhf
+  - armv7
+  - aarch64
   - amd64
+  - i386
 apparmor: false
-privileged: [ "SYS_RAWIO" ]
+privileged: ["SYS_RAWIO"]
 map:
   - share:ro
 schema:
   configfile: "str"
-options: 
+options:
   configfile": /share/vzlogger.conf
 init: false
-image: ghcr.io/holgerb/homeassistant-addon-vzlogger-{arch}
+#image: ghcr.io/holgerb/homeassistant-addon-vzlogger-{arch}
