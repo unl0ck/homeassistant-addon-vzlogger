@@ -19,5 +19,9 @@ schema:
   configfile: "str"
 options:
   configfile": /share/vzlogger.conf
+ports:
+  8084/tcp: 1880
+ports_description:
+  8084/tcp: REST interface
 init: false
 image: ghcr.io/unl0ck/homeassistant-addon-vzlogger-{arch}
