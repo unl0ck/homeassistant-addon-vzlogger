@@ -20,7 +20,7 @@ schema:
 options:
   configfile": /share/vzlogger.conf
 ports:
-  8084/tcp: 1880
+  8084/tcp: 8084
 ports_description:
   8084/tcp: REST interface
 init: false
