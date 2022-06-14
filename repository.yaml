@@ -1,4 +1,4 @@
 # https://developers.home-assistant.io/docs/add-ons/repository#repository-configuration
-name: Simon Helming Addon Repository
+name: Simon Helming HASS Addon Repository
 url: "https://github.com/unl0ck/homeassistant-addon-vzlogger"
 maintainer: Simon Helming
