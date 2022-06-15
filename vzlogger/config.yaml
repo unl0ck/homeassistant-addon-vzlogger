@@ -10,7 +10,6 @@ arch:
   - armv7
   - aarch64
   - amd64
-  - i386
 apparmor: false
 privileged: ["SYS_RAWIO"]
 map:
