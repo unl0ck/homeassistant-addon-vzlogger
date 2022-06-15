@@ -1,5 +1,5 @@
 name: "vzlogger for homeassistant"
-version: dev
+version: 1.0.0
 slug: "homeassistant-addon-vzlogger"
 devices:
   - /dev/ttyUSB0
