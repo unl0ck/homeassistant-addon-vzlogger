@@ -1,8 +1,8 @@
 name: "vzlogger for homeassistant"
 version: "1.0.0"
 slug: "homeassistant-addon-vzlogger"
-devices:
-  - /dev/ttyUSB0
+# devices:
+#  - /dev/ttyUSB0
 description: "vzlogger for homeassistant"
 url: "https://github.com/unl0ck/homeassistant-addon-vzlogger.git"
 arch:
@@ -16,7 +16,9 @@ map:
   - share:ro
 schema:
   configfile: "str"
+  device: device(subsystem=tty)
 options:
+  device: null
   configfile": /share/vzlogger.conf
 ports:
   8084/tcp: 8084
