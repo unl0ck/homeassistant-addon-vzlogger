@@ -3,7 +3,7 @@ version: "1.0.1"
 slug: "homeassistant-addon-vzlogger"
 # devices:
 #  - /dev/ttyUSB0
-description: "vzlogger for homeassistant"
+description: "vzlogger for homeassistant to log meter"
 url: "https://github.com/unl0ck/homeassistant-addon-vzlogger.git"
 arch:
   - armhf
