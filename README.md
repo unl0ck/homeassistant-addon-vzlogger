@@ -25,27 +25,3 @@ This docker image is based on the [addon-debian-base image](https://github.com/h
 2. Install the Addon
 3. Follow the [DOCS](DOCS.md) to configure your vzlogger installation.
 
-## Author
-
-👤 **Markus Siebert**
-
-- Website: info.markussiebert.com
-- Twitter: [@msiebert_com](https://twitter.com/msiebert_com)
-- Github: [@markussiebert](https://github.com/markussiebert)
-
-## 🤝 Contributing
-
-Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/markussiebert/homeassistant-addon-vzlogger/issues).
-
-## Show your support
-
-Give a ⭐️ if this project helped you!
-
-## 📝 License
-
-Copyright © 2021 [Markus Siebert](https://github.com/markussiebert).<br />
-This project is [GNU GENERAL PUBLIC LICENSE Version 3](https://github.com/markussiebert/homeassistant-addon-vzlogger/blob/main/LICENSE) licensed.
-
----
-
-_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
