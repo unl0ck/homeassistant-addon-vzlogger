@@ -1,3 +1,5 @@
+## 1.0.3
+- small fix
 ## 1.0.2
 - changed image path
 ## 1.0.1
