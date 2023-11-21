@@ -5,7 +5,6 @@ FROM $BUILD_FROM
 FROM ${BUILD_FROM} as builder
 
 ENV LANG C.UTF-8
-
 # hadolint ignore=DL3008
 RUN echo $(uname -m) && \
     apk update && apk upgrade &&  apk add \
