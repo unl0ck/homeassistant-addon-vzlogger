@@ -25,5 +25,5 @@ ports:
 ports_description:
   8084/tcp: REST interface
 init: false
-image: ghcr.io/unl0ck/homeassistant-addon-vzlogger/homeassistant-addon-vzlogger-{arch}
+image: ghcr.io/unl0ck/homeassistant-addon-vzlogger-{arch}
 timeout: 30
