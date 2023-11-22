@@ -27,3 +27,4 @@ ports_description:
 init: false
 image: ghcr.io/unl0ck/homeassistant-addon-vzlogger-{arch}
 timeout: 30
+
